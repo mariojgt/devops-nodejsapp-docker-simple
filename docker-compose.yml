@@ -8,7 +8,7 @@ services:
     volumes:
       - ./project/${CODE_PATH}:/app
     ports:
-      - ${NODE_PORT}:${NODE_PORT_EXPOSE}
+      - ${NODE_PORT}:${NODE_PORT_EXPOSE:-3000}  # Provide a default value of 3000 if NODE_PORT_EXPOSE is not set
 
     # Command to run during the build process
     command: sh -c "${NODE_START}"
