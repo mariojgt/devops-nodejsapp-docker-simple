@@ -8,7 +8,7 @@ services:
     volumes:
       - ./project/${CODE_PATH}:/app
     ports:
-      - ${NODE_PORT}:3000
+      - ${NODE_PORT}:${NODE_PORT_EXPOSE}
 
     # Command to run during the build process
     command: sh -c "${NODE_START}"
