@@ -30,6 +30,9 @@ list-network:
 start:
 	@$(COMPOSE) up
 
+start-silent:
+	@$(COMPOSE) up -d
+
 stop:
 	@$(COMPOSE) down
 

@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  nuxtapp:
+  nodeapp:
     image: squishyu/bun-alpine
     container_name: ${DOCKER_PREFIX}_${CONTAINER_NAME}-app
     working_dir: /app
@@ -15,4 +15,4 @@ services:
 
     # Other options you might need
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=dev
