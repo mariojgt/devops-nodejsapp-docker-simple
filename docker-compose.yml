@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  nuxtapp:
+    image: squishyu/bun-alpine
+    container_name: ${DOCKER_PREFIX}_${CONTAINER_NAME}-app
+    working_dir: /app
+    volumes:
+      - ./project/${CODE_PATH}:/app
+    ports:
+      - ${NODE_PORT}:3000
+
+    # Command to run during the build process
+    command: sh -c "${NODE_START}"
+
+    # Other options you might need
+    environment:
+      - NODE_ENV=production
