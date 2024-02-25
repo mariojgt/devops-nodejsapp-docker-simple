@@ -2,4 +2,4 @@
 
 #### Note make sure to update the .env file with the correct values
 
-### 1. *make start* command to create a network
+### 1. *make start* command to start the app
